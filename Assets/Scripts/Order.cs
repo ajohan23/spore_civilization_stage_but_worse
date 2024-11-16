@@ -16,6 +16,8 @@ public class MoveOrder : Order
 {
     Vector3 targetDestination;
     float cancelDistance = 0.1f;
+    IdleOrder idleOrder = new IdleOrder();
+
     public MoveOrder(Vector3 targetDestination, float cancelDistance)
     {
         this.targetDestination = targetDestination;
@@ -24,11 +26,7 @@ public class MoveOrder : Order
 
     public void Cancel(Selectable actor, Transform actorTransform)
     {
-        Movable actorMovable = actorTransform.GetComponent<Movable>();
-        if (actorMovable != null)
-        {
-            actorMovable.StopMoving();
-        }
+        idleOrder.Execute(actor, actorTransform);
     }
 
     public void Execute(Selectable actor, Transform actorTransform)
@@ -51,6 +49,29 @@ public class MoveOrder : Order
     }
 }
 
+public class IdleOrder : Order
+{
+    public void Cancel(Selectable actor, Transform actorTransform)
+    {
+        MakeActorIdle(actor, actorTransform);
+    }
+
+    public void Execute(Selectable actor, Transform actorTransform)
+    {
+        MakeActorIdle(actor, actorTransform);
+    }
+
+    void MakeActorIdle(Selectable actor, Transform actorTransform)
+    {
+        Movable actorMovable = actorTransform.GetComponent<Movable>(); 
+        if (actorMovable != null)
+        {
+            actorMovable.StopMoving();
+            actor.SetCurrentAction("Idle");
+        }
+    }
+}
+
 public class BuildOrder : Order
 {
     Buildable building;
@@ -63,7 +84,7 @@ public class BuildOrder : Order
         this.buildingLocation = buildingLocation;
         this.building = building;
         this.buildDistance = buildDistance;
-        moveOrder = new MoveOrder(buildingLocation, buildDistance - 1);
+        moveOrder = new MoveOrder(buildingLocation, buildDistance);
     }
 
     public void Cancel(Selectable actor, Transform actorTransform)
@@ -73,11 +94,14 @@ public class BuildOrder : Order
 
     public void Execute(Selectable actor, Transform actorTransform)
     {
+        Debug.Log("Building");
         Builder actorBuilder = actorTransform.GetComponent<Builder>();
-        if (actorBuilder == null) actor.CancelCurrentOrder();
+        if (actorBuilder == null) 
+            actor.CancelCurrentOrder();
 
         if (Vector3.Distance(actorTransform.position, buildingLocation) <= buildDistance)
         {
+            moveOrder.Cancel(actor, actorTransform);
             actorBuilder.Build(building);
         }
         else

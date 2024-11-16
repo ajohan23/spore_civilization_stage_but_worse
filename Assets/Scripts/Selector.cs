@@ -64,6 +64,7 @@ public class Selector : MonoBehaviour
                             }
                             break;
                         case "Spice Geyser":
+                            print("Spice");
                             Buildable geyserBuildable = hit.transform.GetComponent<Buildable>();
                             if (geyserBuildable != null)
                             {
@@ -76,7 +77,8 @@ public class Selector : MonoBehaviour
                                 }
                                 else
                                 {
-                                    BuildOrder buildOrder = new BuildOrder(hit.transform.position, geyserBuildable, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 2);
+                                    print("Issuing build order");
+                                    BuildOrder buildOrder = new BuildOrder(hit.transform.position, geyserBuildable, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 5);
                                     foreach (Selectable _selected in selected)
                                     {
                                         _selected.ExecuteOrder(buildOrder);

@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class VehicleController : MonoBehaviour, Selectable, Movable
 {
     public NavMeshAgent agent;
+    public GameObject selectionIndicator;
 
     Order currentOrder;
     string currentAction = "Idle";
@@ -25,13 +26,13 @@ public class VehicleController : MonoBehaviour, Selectable, Movable
 
     public void OnDeselect()
     {
-        print($"{transform.name} was deselected");
+        EnableSelectionIndicator(false);
     }
 
     public void OnSelect(Selector selector)
     {
         selector.AddSelection(this);
-        print($"{transform.name} was selected");
+        EnableSelectionIndicator(true);
     }
 
     /// <summary>
@@ -69,5 +70,13 @@ public class VehicleController : MonoBehaviour, Selectable, Movable
     public void StopMoving()
     {
         agent.isStopped = true;
+    }
+
+    void EnableSelectionIndicator(bool state)
+    {
+        if (selectionIndicator != null)
+        {
+            selectionIndicator.SetActive(state);
+        }
     }
 }

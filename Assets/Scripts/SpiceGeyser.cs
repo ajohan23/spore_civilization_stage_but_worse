@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SpiceGeyser : MonoBehaviour, Buildable
@@ -7,7 +8,7 @@ public class SpiceGeyser : MonoBehaviour, Buildable
     int team = -1;
     bool isBuild = false;
     [SerializeField] GameObject spiceTower;
-    [SerializeField] float buildAmount;
+    [SerializeField] float buildAmount = 2;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
@@ -21,13 +22,14 @@ public class SpiceGeyser : MonoBehaviour, Buildable
 
         if (progression[team] >= buildAmount)
         {
+            this.team = team;
             isBuild = true;
         }
     }
 
     public float GetProgression()
     {
-        throw new System.NotImplementedException();
+        return progression.Values.Max();
     }
 
     public int GetTeam()
@@ -37,6 +39,6 @@ public class SpiceGeyser : MonoBehaviour, Buildable
 
     public bool IsBuild()
     {
-        throw new System.NotImplementedException();
+        return isBuild;
     }
 }
