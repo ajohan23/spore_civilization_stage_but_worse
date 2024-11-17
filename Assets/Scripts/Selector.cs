@@ -122,4 +122,14 @@ public class Selector : MonoBehaviour
         if (!selected.Contains(selectable))
             selected.Add(selectable);
     }
+
+    public int GetTeam()
+    {
+        return team;
+    }
+
+    public Selectable[] GetSelected()
+    {
+        return selected.ToArray();
+    }
 }

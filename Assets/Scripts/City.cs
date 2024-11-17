@@ -1,18 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
+public class City : MonoBehaviour, Selectable
 {
-    //Settings
-    public NavMeshAgent agent;
-    public GameObject selectionIndicator;
-    [SerializeField] float buildSpeed = 0.1f;
     [SerializeField] int team = 0;
+    [SerializeField] GameObject selectionIndicator;
 
-    Order currentOrder;
+    Order currentOrder = null;
     string currentAction = "Idle";
 
     public void CancelCurrentOrder()
@@ -38,7 +33,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
         {
             return;
         }
-
+        selector.DeselectAll();
         selector.AddSelection(this);
         EnableSelectionIndicator(true);
     }
@@ -61,35 +56,11 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
         currentAction = action;
     }
 
-    public void SetDestination(Vector3 destination)
-    {
-        agent.SetDestination(destination);
-        agent.isStopped = false;
-    }
-
-    void Update()
-    {
-        if (currentOrder != null)
-        {
-            currentOrder.Execute(this, transform);
-        }
-    }
-
-    public void StopMoving()
-    {
-        agent.isStopped = true;
-    }
-
     void EnableSelectionIndicator(bool state)
     {
         if (selectionIndicator != null)
         {
             selectionIndicator.SetActive(state);
         }
-    }
-
-    public void Build(Buildable buildable)
-    {
-        buildable.Build(buildSpeed * Time.deltaTime, team);
     }
 }

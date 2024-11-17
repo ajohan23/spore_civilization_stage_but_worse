@@ -78,6 +78,7 @@ public class BuildOrder : Order
     Vector3 buildingLocation;
     float buildDistance;
     MoveOrder moveOrder;
+    IdleOrder idleOrder = new IdleOrder();
 
     public BuildOrder(Vector3 buildingLocation, Buildable building, float buildDistance)
     {
@@ -89,20 +90,28 @@ public class BuildOrder : Order
 
     public void Cancel(Selectable actor, Transform actorTransform)
     {
-        
+        idleOrder.Execute(actor, actorTransform);
     }
 
     public void Execute(Selectable actor, Transform actorTransform)
     {
-        Debug.Log("Building");
         Builder actorBuilder = actorTransform.GetComponent<Builder>();
-        if (actorBuilder == null) 
+        if (actorBuilder == null)
+        {
             actor.CancelCurrentOrder();
+            return;
+        }
 
         if (Vector3.Distance(actorTransform.position, buildingLocation) <= buildDistance)
         {
             moveOrder.Cancel(actor, actorTransform);
             actorBuilder.Build(building);
+            actor.SetCurrentAction("Building");
+
+            if (building.IsBuild())
+            {
+                actor.CancelCurrentOrder();
+            }
         }
         else
         {
@@ -132,5 +141,7 @@ public interface Buildable
     public float GetProgression();
 
     public int GetTeam();
+
+    public void Destroy();
 }
 

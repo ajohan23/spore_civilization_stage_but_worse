@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1555419245400915722}
   - component: {fileID: 5980577801772724604}
   m_Layer: 0
-  m_Name: Quad
+  m_Name: Selection Indicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -250,3 +250,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5624324125468827393}
   selectionIndicator: {fileID: 614176004370332450}
+  buildSpeed: 0.1
+  team: 0

@@ -74,4 +74,9 @@ public class CameraController : MonoBehaviour
             Mathf.Clamp(transform.position.z, boundBoxCenter.z + -boundingBoxSize.z / 2, boundBoxCenter.z + boundingBoxSize.z / 2)
             );
     }
+
+    public void LookAt(Vector3 location)
+    {
+        transform.position = new Vector3(location.x, transform.position.y, location.z);
+    }
 }

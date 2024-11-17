@@ -6,7 +6,6 @@ using UnityEngine;
 public class SpiceGeyser : MonoBehaviour, Buildable
 {
     int team = -1;
-    bool isBuild = false;
     [SerializeField] GameObject spiceTower;
     [SerializeField] float buildAmount = 2;
 
@@ -23,8 +22,13 @@ public class SpiceGeyser : MonoBehaviour, Buildable
         if (progression[team] >= buildAmount)
         {
             this.team = team;
-            isBuild = true;
+            EnableBuilding(true);
         }
+    }
+
+    public void Destroy()
+    {
+        EnableBuilding(false);
     }
 
     public float GetProgression()
@@ -39,6 +43,12 @@ public class SpiceGeyser : MonoBehaviour, Buildable
 
     public bool IsBuild()
     {
-        return isBuild;
+        return spiceTower.activeSelf;
+    }
+
+    void EnableBuilding(bool state)
+    {
+        spiceTower.SetActive(state);
+        progression.Clear();
     }
 }
