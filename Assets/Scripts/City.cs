@@ -36,6 +36,11 @@ public class City : MonoBehaviour, Selectable
         selector.DeselectAll();
         selector.AddSelection(this);
         EnableSelectionIndicator(true);
+
+        if (CameraController.instance != null)
+        {
+            CameraController.instance.LookAt(transform.position);
+        }
     }
 
     /// <summary>

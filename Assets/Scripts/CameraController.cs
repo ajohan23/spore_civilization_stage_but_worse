@@ -12,6 +12,16 @@ public class CameraController : MonoBehaviour
     [SerializeField] Vector3 boundingBoxSize;
     [SerializeField] Vector3 boundBoxCenter;
 
+    //Singleton
+    public static CameraController instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
     //Runtime
     bool isStopped = false;
 
@@ -77,6 +87,7 @@ public class CameraController : MonoBehaviour
 
     public void LookAt(Vector3 location)
     {
-        transform.position = new Vector3(location.x, transform.position.y, location.z);
+        float zOffset = Mathf.Tan(transform.localRotation.x) * (transform.position.y - location.y)/2;
+        transform.position = new Vector3(location.x, transform.position.y, location.z - zOffset);
     }
 }
