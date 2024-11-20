@@ -11,6 +11,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
     public GameObject selectionIndicator;
     [SerializeField] float buildSpeed = 0.1f;
     [SerializeField] int team = 0;
+    [SerializeField] new Renderer renderer;
 
     Order currentOrder;
     string currentAction = "Idle";
@@ -75,6 +76,11 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
         }
     }
 
+    void Start()
+    {
+        UpdateColor();
+    }
+
     public void StopMoving()
     {
         agent.isStopped = true;
@@ -96,5 +102,11 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
     public void SetTeam(int team)
     {
         this.team = team;
+        UpdateColor();
+    }
+
+    void UpdateColor()
+    {
+        renderer.material.color = NationsManager.GetNation(team).GetTeamColor();
     }
 }

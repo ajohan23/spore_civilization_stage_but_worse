@@ -120,6 +120,24 @@ public class BuildOrder : Order
     }
 }
 
+public class AttackOrder : Order
+{
+    Buildable target;
+    Vector3 targetLocation;
+    MoveOrder moveOrder;
+    IdleOrder idleOrder = new IdleOrder();
+
+    public void Cancel(Selectable actor, Transform actorTransform)
+    {
+        actor.ExecuteOrder(idleOrder);
+    }
+
+    public void Execute(Selectable actor, Transform actorTransform)
+    {
+        
+    }
+}
+
 public interface Movable
 {
     public void SetDestination(Vector3 destination);
@@ -144,4 +162,3 @@ public interface Buildable
 
     public void Destroy();
 }
-

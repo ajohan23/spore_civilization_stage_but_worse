@@ -5057,6 +5057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spiceTower: {fileID: 7018247834449928232}
   buildAmount: 2
+  renderer: {fileID: 7158831285977618247}
 --- !u!1 &7689486687706427399
 GameObject:
   m_ObjectHideFlags: 0
