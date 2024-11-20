@@ -92,4 +92,9 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
     {
         buildable.Build(buildSpeed * Time.deltaTime, team);
     }
+
+    public void SetTeam(int team)
+    {
+        this.team = team;
+    }
 }

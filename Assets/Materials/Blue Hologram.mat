@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Hologram Button
+  m_Name: Blue Hologram
   m_Shader: {fileID: -6465566751694194690, guid: 6e81eb5a173d3d14c8ae02e6ee133f76,
     type: 3}
   m_Parent: {fileID: 0}

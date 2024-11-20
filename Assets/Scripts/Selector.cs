@@ -34,10 +34,15 @@ public class Selector : MonoBehaviour
                     selectable.OnSelect(this);
                     return;
                 }
-                else
+
+                PhysicalButton button = hit.transform.GetComponent<PhysicalButton>();
+                if (button != null)
                 {
-                    DeselectAll();
+                    button.Press();
+                    return;
                 }
+
+                DeselectAll();
             }
         }
     }

@@ -6,6 +6,10 @@ public class City : MonoBehaviour, Selectable
 {
     [SerializeField] int team = 0;
     [SerializeField] GameObject selectionIndicator;
+    [SerializeField] Transform carSpawnpoint;
+    [SerializeField] Transform carRallypoint;
+    [SerializeField] GameObject carPrefab;
+
 
     Order currentOrder = null;
     string currentAction = "Idle";
@@ -66,6 +70,17 @@ public class City : MonoBehaviour, Selectable
         if (selectionIndicator != null)
         {
             selectionIndicator.SetActive(state);
+        }
+    }
+
+    public void BuyCar()
+    {
+        GameObject newCar = Instantiate(carPrefab, carSpawnpoint.position, Quaternion.identity);
+        VehicleController car = newCar.GetComponent<VehicleController>();
+        if (car != null)
+        {
+            car.SetTeam(team);
+            car.SetDestination(carRallypoint.position);
         }
     }
 }
