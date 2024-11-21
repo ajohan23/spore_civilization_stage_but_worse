@@ -11,7 +11,7 @@ public class ButtonBillboard : MonoBehaviour
         if (billboard != null)
         {
             billboard.forward = Camera.main.transform.forward;
-            billboard.position = transform.position + (Camera.main.transform.position - transform.position).normalized * transform.localScale.z/2;
+            //billboard.position = transform.position + (Camera.main.transform.position - transform.position).normalized * transform.localScale.z/2;
         }
     }
 }

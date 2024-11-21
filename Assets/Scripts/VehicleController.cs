@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
+public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, Attacker
 {
     //Settings
     public NavMeshAgent agent;
@@ -12,9 +12,14 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
     [SerializeField] float buildSpeed = 0.1f;
     [SerializeField] int team = 0;
     [SerializeField] new Renderer renderer;
+    [SerializeField] GameObject rocket;
+    [SerializeField] Transform rocketBay;
+    [SerializeField] float reloadTime = 2f;
+    [SerializeField] MovementType movementType = MovementType.Land;
 
     Order currentOrder;
     string currentAction = "Idle";
+    float reloadCooldown = 0f;
 
     public void CancelCurrentOrder()
     {
@@ -74,6 +79,11 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
         {
             currentOrder.Execute(this, transform);
         }
+
+        if (reloadCooldown > 0f)
+        {
+            reloadCooldown -= Time.deltaTime;
+        }
     }
 
     void Start()
@@ -108,5 +118,30 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder
     void UpdateColor()
     {
         renderer.material.color = NationsManager.GetNation(team).GetTeamColor();
+    }
+
+    public void Attack(Transform target)
+    {
+        Buildable targetBuilding = target.GetComponent<Buildable>();
+        if (targetBuilding != null)
+        {
+            if (targetBuilding.GetTeam() == this.team)
+            {
+                CancelCurrentOrder();
+            }
+        }
+
+        if (reloadCooldown <= 0f)
+        {
+            GameObject newRocket = Instantiate(rocket, rocketBay.position, rocketBay.rotation);
+            Rocket _rocket = newRocket.GetComponent<Rocket>();
+            _rocket.SetTargetAndTeam(target, team);
+            reloadCooldown = reloadTime;
+        }
+    }
+
+    public MovementType GetMovementType()
+    {
+        return movementType;
     }
 }

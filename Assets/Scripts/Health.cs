@@ -13,7 +13,7 @@ public interface Health
     public int GetTeam();
 }
 
-public interface Atacker
+public interface Attacker
 {
     public void Attack(Transform target);
 }

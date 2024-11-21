@@ -123,9 +123,18 @@ public class BuildOrder : Order
 public class AttackOrder : Order
 {
     Buildable target;
-    Vector3 targetLocation;
+    Transform targetTransform;
+    float attackDistance;
     MoveOrder moveOrder;
     IdleOrder idleOrder = new IdleOrder();
+
+    public AttackOrder(Buildable target, Transform targetTransform, float attackDistance)
+    {
+        this.target = target;
+        this.targetTransform = targetTransform;
+        this.attackDistance = attackDistance;
+        moveOrder = new MoveOrder(this.targetTransform.position, attackDistance);
+    }
 
     public void Cancel(Selectable actor, Transform actorTransform)
     {
@@ -134,7 +143,23 @@ public class AttackOrder : Order
 
     public void Execute(Selectable actor, Transform actorTransform)
     {
-        
+        if (Vector3.Distance(actorTransform.position, targetTransform.position) > attackDistance)
+        {
+            moveOrder.Execute(actor, actorTransform);
+        }
+        else
+        {
+            moveOrder.Cancel(actor, actorTransform);
+            Attacker attacker = actorTransform.GetComponent<Attacker>();
+            if (attacker != null)
+            {
+                attacker.Attack(targetTransform);
+            }
+            else
+            {
+                Cancel(actor, targetTransform);
+            }
+        }
     }
 }
 

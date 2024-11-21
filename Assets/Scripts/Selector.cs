@@ -63,9 +63,23 @@ public class Selector : MonoBehaviour
                     switch (hit.transform.tag)
                     {
                         case "Ground":
+                            MoveOrder moveOrder = CreateMoveOrder(hit.point);
                             foreach (Selectable _selected in selected)
                             {
-                                _selected.ExecuteOrder(CreateMoveOrder(hit.point));
+                                if(_selected.GetMovementType() == MovementType.Land)
+                                {
+                                    _selected.ExecuteOrder(moveOrder);
+                                }
+                            }
+                            break;
+                        case "Water":
+                            moveOrder = CreateMoveOrder(hit.point);
+                            foreach (Selectable _selected in selected)
+                            {
+                                if(_selected.GetMovementType() == MovementType.Sea)
+                                {
+                                    _selected.ExecuteOrder(moveOrder);
+                                }
                             }
                             break;
                         case "Spice Geyser":
@@ -77,7 +91,11 @@ public class Selector : MonoBehaviour
                                 {
                                    if (geyserBuildable.GetTeam() != team)
                                     {
-                                        //TODO: Issuee attack order
+                                        AttackOrder attackOrder = new AttackOrder(geyserBuildable, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 5);
+                                        foreach (Selectable _selected in selected)
+                                        {
+                                            _selected.ExecuteOrder(attackOrder);
+                                        }
                                     }
                                 }
                                 else
@@ -88,6 +106,20 @@ public class Selector : MonoBehaviour
                                     {
                                         _selected.ExecuteOrder(buildOrder);
                                     }
+                                }
+                            }
+                            break;
+                        case "City":
+                            print("city");
+                            Buildable city = hit.transform.GetComponent<Buildable>();
+                            if (city == null)
+                                return;
+                            if (city.GetTeam() != team)
+                            {
+                                AttackOrder attackOrder = new AttackOrder(city, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 1.1f);
+                                foreach (Selectable _selected in selected)
+                                {
+                                    _selected.ExecuteOrder(attackOrder);
                                 }
                             }
                             break;

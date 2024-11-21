@@ -15,4 +15,13 @@ public interface Selectable
     public string GetCurrentAction();
 
     public void SetCurrentAction(string action);
+
+    public MovementType GetMovementType();
+}
+
+public enum MovementType
+{
+    None,
+    Land,
+    Sea
 }

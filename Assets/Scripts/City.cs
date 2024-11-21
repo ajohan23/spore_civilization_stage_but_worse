@@ -12,6 +12,11 @@ public class City : MonoBehaviour, Selectable, Buildable
     MoveOrder carRallypointOrder;
     [SerializeField] GameObject carPrefab;
     [SerializeField] int carPrice = 1000;
+    [SerializeField] Transform boatSpawnpoint;
+    [SerializeField] Transform boatRallypoint;
+    MoveOrder boatRallypointOrder;
+    [SerializeField] GameObject boatPrefab;
+    [SerializeField] int boatPrice = 1500;
     [SerializeField] float maxHealth = 1000f;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
@@ -59,11 +64,6 @@ public class City : MonoBehaviour, Selectable, Buildable
         selector.DeselectAll();
         selector.AddSelection(this);
         EnableSelectionIndicator(true);
-
-        if (CameraController.instance != null)
-        {
-            CameraController.instance.LookAt(transform.position);
-        }
     }
 
     /// <summary>
@@ -109,6 +109,23 @@ public class City : MonoBehaviour, Selectable, Buildable
         }
     }
 
+    public void BuyBoat()
+    {
+        if (nation == null)
+            return;
+
+        if (!nation.RemoveMoney(boatPrice))
+            return;
+
+        GameObject newBoat = Instantiate(boatPrefab, boatSpawnpoint.position, Quaternion.identity);
+        VehicleController boat = newBoat.GetComponent<VehicleController>();
+        if (boat != null)
+        {
+            boat.SetTeam(team);
+            boat.ExecuteOrder(boatRallypointOrder);
+        }
+    }
+
     public int GetTeam()
     {
         return team;
@@ -125,6 +142,7 @@ public class City : MonoBehaviour, Selectable, Buildable
         if (progression[team] >= maxHealth)
         {
             this.team = team;
+            nation = NationsManager.GetNation(team);
             UpdateColor();
         }
     }
@@ -148,5 +166,10 @@ public class City : MonoBehaviour, Selectable, Buildable
     {
         Renderer renderer = gameObject.GetComponent<Renderer>();
         renderer.material.color = nation.GetTeamColor();
+    }
+
+    public MovementType GetMovementType()
+    {
+        return MovementType.None;
     }
 }
