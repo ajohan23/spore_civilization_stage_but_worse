@@ -16,6 +16,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     [SerializeField] Transform rocketBay;
     [SerializeField] float reloadTime = 2f;
     [SerializeField] MovementType movementType = MovementType.Land;
+    public bool landVehicle = true;
 
     Order currentOrder;
     string currentAction = "Idle";
@@ -88,6 +89,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
     void Start()
     {
+        NationsManager.GetNation(team).AddVehicle(this);
         UpdateColor();
     }
 
@@ -143,5 +145,10 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     public MovementType GetMovementType()
     {
         return movementType;
+    }
+
+    private void OnDestroy()
+    {
+        NationsManager.GetNation(team).RemoveVehicle(this);
     }
 }

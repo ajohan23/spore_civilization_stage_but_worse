@@ -14,6 +14,7 @@ public class SpiceGeyser : MonoBehaviour, Buildable, Health
     [SerializeField] int moneyGenerated = 200;
     [SerializeField] float maxHealth = 100f;
     float currentHealth = 0f;
+    [SerializeField] bool onLand = true;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
@@ -105,5 +106,10 @@ public class SpiceGeyser : MonoBehaviour, Buildable, Health
     public float GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    public bool OnLand()
+    {
+        return onLand;
     }
 }

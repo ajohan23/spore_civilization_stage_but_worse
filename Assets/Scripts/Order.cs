@@ -186,4 +186,6 @@ public interface Buildable
     public int GetTeam();
 
     public void Destroy();
+
+    public bool OnLand();
 }

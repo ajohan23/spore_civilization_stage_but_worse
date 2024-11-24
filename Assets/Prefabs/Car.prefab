@@ -282,10 +282,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5624324125468827393}
   selectionIndicator: {fileID: 614176004370332450}
-  buildSpeed: 0.1
+  buildSpeed: 1
   team: 0
   renderer: {fileID: 1341003077362469789}
   rocket: {fileID: 1400892908677033849, guid: 3d710eb58053f9842b17dce0ad3ebb7f, type: 3}
   rocketBay: {fileID: 6142676057391329379}
   reloadTime: 3
   movementType: 1
+  landVehicle: 1

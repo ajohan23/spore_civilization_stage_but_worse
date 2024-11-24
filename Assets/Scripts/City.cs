@@ -18,6 +18,7 @@ public class City : MonoBehaviour, Selectable, Buildable
     [SerializeField] GameObject boatPrefab;
     [SerializeField] int boatPrice = 1500;
     [SerializeField] float maxHealth = 1000f;
+    [SerializeField] bool onLand = true;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
@@ -34,8 +35,10 @@ public class City : MonoBehaviour, Selectable, Buildable
             return;
         }
         UpdateColor();
+        nation.AddCity(this);
 
         carRallypointOrder = new MoveOrder(carRallypoint.position, 5f);
+        boatRallypointOrder = new MoveOrder(boatRallypoint.position, 5f);
     }
 
     public void CancelCurrentOrder()
@@ -141,8 +144,10 @@ public class City : MonoBehaviour, Selectable, Buildable
 
         if (progression[team] >= maxHealth)
         {
+            nation.RemoveCity(this);
             this.team = team;
             nation = NationsManager.GetNation(team);
+            nation.AddCity(this);
             UpdateColor();
         }
     }
@@ -171,5 +176,10 @@ public class City : MonoBehaviour, Selectable, Buildable
     public MovementType GetMovementType()
     {
         return MovementType.None;
+    }
+
+    public bool OnLand()
+    {
+        return onLand;
     }
 }
