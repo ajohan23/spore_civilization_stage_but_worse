@@ -5011,11 +5011,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spiceTower: {fileID: 7018247834449928232}
-  buildAmount: 2
+  buildAmount: 200
   renderer: {fileID: 7158831285977618247}
   generationDelay: 10
   moneyGenerated: 200
-  maxHealth: 100
   onLand: 1
 --- !u!136 &4958615004680190197
 CapsuleCollider:

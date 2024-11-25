@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface Health
 {
-    public void DealDamage(float damage);
+    public void DealDamage(float damage, VehicleController attacker);
 
     public float GetRemainingHealth();
 

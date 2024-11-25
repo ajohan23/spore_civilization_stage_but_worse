@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SpiceGeyser : MonoBehaviour, Buildable, Health
+public class SpiceGeyser : MonoBehaviour, Buildable
 {
     int team = -1;
     [SerializeField] GameObject spiceTower;
@@ -12,13 +12,11 @@ public class SpiceGeyser : MonoBehaviour, Buildable, Health
     [SerializeField] float generationDelay = 10f;
     float timeToMoney = 0f;
     [SerializeField] int moneyGenerated = 200;
-    [SerializeField] float maxHealth = 100f;
-    float currentHealth = 0f;
     [SerializeField] bool onLand = true;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
-    public void Build(float progressAmt, int team)
+    public void Build(float progressAmt, int team, VehicleController attacker)
     {
         if (!progression.ContainsKey(team))
         {
@@ -30,6 +28,14 @@ public class SpiceGeyser : MonoBehaviour, Buildable, Health
         {
             this.team = team;
             BuildTower();
+        }
+
+        if (IsBuild())
+        {
+            if (attacker != null)
+            {
+                NationsManager.GetNation(team).SpotThreat(attacker);
+            }
         }
     }
 
@@ -85,27 +91,7 @@ public class SpiceGeyser : MonoBehaviour, Buildable, Health
     void BuildTower()
     {
         UpdateColor();
-        currentHealth = maxHealth;
         EnableBuilding(true);
-    }
-
-    public void DealDamage(float damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth < 0)
-        {
-            Destroy();
-        }
-    }
-
-    public float GetRemainingHealth()
-    {
-        return currentHealth;
-    }
-
-    public float GetMaxHealth()
-    {
-        return maxHealth;
     }
 
     public bool OnLand()

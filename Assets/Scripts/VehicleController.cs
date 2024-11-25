@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, Attacker
+public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, Attacker, Health
 {
     //Settings
     public NavMeshAgent agent;
@@ -17,7 +17,10 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     [SerializeField] float reloadTime = 2f;
     [SerializeField] MovementType movementType = MovementType.Land;
     public bool landVehicle = true;
+    [SerializeField] GameObject deathExplosion;
+    [SerializeField] float maxHealth = 100;
 
+    float currentHealth = 100;
     Order currentOrder;
     string currentAction = "Idle";
     float reloadCooldown = 0f;
@@ -89,6 +92,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
     void Start()
     {
+        currentHealth = maxHealth;
         NationsManager.GetNation(team).AddVehicle(this);
         UpdateColor();
     }
@@ -108,7 +112,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
     public void Build(Buildable buildable)
     {
-        buildable.Build(buildSpeed * Time.deltaTime, team);
+        buildable.Build(buildSpeed * Time.deltaTime, team, this);
     }
 
     public void SetTeam(int team)
@@ -137,7 +141,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
         {
             GameObject newRocket = Instantiate(rocket, rocketBay.position, rocketBay.rotation);
             Rocket _rocket = newRocket.GetComponent<Rocket>();
-            _rocket.SetTargetAndTeam(target, team);
+            _rocket.SetTargetAndTeam(target, team, this);
             reloadCooldown = reloadTime;
         }
     }
@@ -150,5 +154,44 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     private void OnDestroy()
     {
         NationsManager.GetNation(team).RemoveVehicle(this);
+    }
+
+    public void DealDamage(float damage, VehicleController attacker)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth < 0f)
+        {
+            Die();
+        }
+
+        if (attacker == null)
+            return;
+
+        if (attacker != null)
+        {
+            NationsManager.GetNation(team).SpotThreat(attacker);
+        }
+    }
+
+    public float GetRemainingHealth()
+    {
+        return currentHealth;
+    }
+
+    public float GetMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public int GetTeam()
+    {
+        return team;
+    }
+
+    void Die()
+    {
+        Instantiate(deathExplosion, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

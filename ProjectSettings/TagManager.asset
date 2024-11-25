@@ -8,6 +8,7 @@ TagManager:
   - Water
   - Spice Geyser
   - City
+  - Vehicle
   layers:
   - Default
   - TransparentFX

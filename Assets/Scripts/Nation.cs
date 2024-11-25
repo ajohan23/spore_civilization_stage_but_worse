@@ -12,6 +12,11 @@ public class Nation
     [SerializeField] List<City> cities = new List<City>();
 
     [SerializeField] int money = 1000;
+    [SerializeField] float threatAutoRespondRange = 30f;
+
+    public delegate void ThreatSpottet(VehicleController threat);
+    public ThreatSpottet onThreatSpottet;
+    public ThreatSpottet onPriorityThreatSpottet;
 
     public void AddMoney(int amount)
     {
@@ -84,5 +89,35 @@ public class Nation
     public VehicleController[] GetVehicles()
     {
         return vehicles.ToArray();
+    }
+
+    public void SpotThreat(VehicleController threat)
+    {
+        if (NationsManager.GetNation(threat.GetTeam()) != this)
+        {
+            onThreatSpottet?.Invoke(threat);
+            AutoRespond(threat);
+        }
+    }
+
+    public void SpotPriorityThreat(VehicleController threat)
+    {
+        if (NationsManager.GetNation(threat.GetTeam()) != this)
+        {
+            onPriorityThreatSpottet?.Invoke(threat);
+            AutoRespond(threat);
+        }
+    }
+
+    void AutoRespond(VehicleController threat)
+    {
+        HealthAttackOrder order = new HealthAttackOrder(threat, threat.transform, threat.transform.localScale.x * 8);
+        foreach(VehicleController friendly in vehicles)
+        {
+            if (Vector3.Distance(friendly.transform.position, threat.transform.position) <= threatAutoRespondRange && friendly.GetCurrentAction() == "Idle")
+            {
+                friendly.ExecuteOrder(order);
+            }
+        }
     }
 }

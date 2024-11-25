@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 3054925329611385628}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Vehicle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5624324125468827393}
   selectionIndicator: {fileID: 614176004370332450}
-  buildSpeed: 1
+  buildSpeed: 100
   team: 0
   renderer: {fileID: 1341003077362469789}
   rocket: {fileID: 1400892908677033849, guid: 3d710eb58053f9842b17dce0ad3ebb7f, type: 3}
@@ -290,3 +290,6 @@ MonoBehaviour:
   reloadTime: 3
   movementType: 1
   landVehicle: 1
+  deathExplosion: {fileID: 155012129518596232, guid: fc183e60899fc4a4e8491aa51327507d,
+    type: 3}
+  maxHealth: 100

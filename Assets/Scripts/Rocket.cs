@@ -11,16 +11,19 @@ public class Rocket : MonoBehaviour
     public GameObject explosion;
     public float damage = 10f;
     public float turningSpeed = 0.5f;
+    public VehicleController owner;
 
+    bool homing = false;
     Transform target;
     int team = 0;
     Rigidbody rb;
     Vector3 currentTarget;
 
-    public void SetTargetAndTeam(Transform target, int team)
+    public void SetTargetAndTeam(Transform target, int team, VehicleController owner)
     {
         this.target = target;
         this.team = team;
+        this.owner = owner;
     }
 
     private void Awake()
@@ -32,8 +35,15 @@ public class Rocket : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Vector3.Distance(currentTarget, transform.position) <= targetChangeDistance)
+        if (target == null)
         {
+            Explode();
+            return;
+        }
+
+        if (Vector3.Distance(currentTarget, transform.position) <= targetChangeDistance || homing == true)
+        {
+            homing = true;
             currentTarget = target.position;
         }
         Vector3 targetForwardVector = currentTarget - transform.position;
@@ -43,22 +53,29 @@ public class Rocket : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (explosion != null)
-        {
-            Instantiate(explosion, transform.position, Quaternion.identity);
-        }
 
         Buildable buildable = collision.transform.GetComponent<Buildable>();
         if (buildable != null)
         {
-            buildable.Build(damage, team);
+            buildable.Build(damage, team, owner);
         }
+
         Health health = collision.transform.GetComponent<Health>();
         if (health != null)
         {
-            health.DealDamage(damage);
+            health.DealDamage(damage, owner);
         }
 
+        Explode();
+    }
+
+    void Explode()
+    {
+
+        if (explosion != null)
+        {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public interface Order
@@ -163,6 +164,58 @@ public class AttackOrder : Order
     }
 }
 
+public class HealthAttackOrder : Order
+{
+    Health target;
+    Transform targetTransform;
+    float attackDistance;
+    MoveOrder moveOrder;
+    IdleOrder idleOrder = new IdleOrder();
+
+    public HealthAttackOrder(Health target, Transform targetTransform, float attackDistance)
+    {
+        this.target = target;
+        this.targetTransform = targetTransform;
+        this.attackDistance = attackDistance;
+    }
+    public void Cancel(Selectable actor, Transform actorTransform)
+    {
+        actor.ExecuteOrder(idleOrder);
+    }
+
+    public void Execute(Selectable actor, Transform actorTransform)
+    {
+        if (targetTransform == null || target == null)
+        {
+            Cancel(actor, actorTransform);
+            return;
+        }
+
+        if (Vector3.Distance(actorTransform.position, targetTransform.position) > attackDistance)
+        {
+            moveOrder = new MoveOrder(targetTransform.position, attackDistance);
+            moveOrder.Execute(actor, actorTransform);
+        }
+        else
+        {
+            Movable actorMovable = actorTransform.GetComponent<Movable>();
+            if (actorMovable != null)
+            {
+                actorMovable.StopMoving();
+            }
+            Attacker attacker = actorTransform.GetComponent<Attacker>();
+            if (attacker != null)
+            {
+                attacker.Attack(targetTransform);
+            }
+            else
+            {
+                Cancel(actor, targetTransform);
+            }
+        }
+    }
+}
+
 public interface Movable
 {
     public void SetDestination(Vector3 destination);
@@ -177,7 +230,7 @@ public interface Builder
 
 public interface Buildable
 {
-    public void Build(float progressAmt, int team);
+    public void Build(float progressAmt, int team, VehicleController builder);
 
     public bool IsBuild();
 

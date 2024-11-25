@@ -4847,13 +4847,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7facb3bdae1890449891aa2e3b4e075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 30
   flightPathTop: 15
   targetChangeDistance: 0.5
   explosion: {fileID: 869932057612633520, guid: 93afa82aedc104e41a5c474e6b594e5b,
     type: 3}
   damage: 10
   turningSpeed: 0.1
+  owner: {fileID: 0}
 --- !u!54 &7053668698036578220
 Rigidbody:
   m_ObjectHideFlags: 0

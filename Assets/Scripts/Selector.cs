@@ -110,7 +110,6 @@ public class Selector : MonoBehaviour
                             }
                             break;
                         case "City":
-                            print("city");
                             Buildable city = hit.transform.GetComponent<Buildable>();
                             if (city == null)
                                 return;
@@ -120,6 +119,19 @@ public class Selector : MonoBehaviour
                                 foreach (Selectable _selected in selected)
                                 {
                                     _selected.ExecuteOrder(attackOrder);
+                                }
+                            }
+                            break;
+                        case "Vehicle":
+                            Health health = hit.transform.GetComponent<Health>();
+                            if (health == null) 
+                                return;
+                            if (health.GetTeam() != team)
+                            {
+                                HealthAttackOrder order = new HealthAttackOrder(health, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 8f);
+                                foreach (Selectable _selected in selected)
+                                {
+                                    _selected.ExecuteOrder(order);
                                 }
                             }
                             break;

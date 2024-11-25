@@ -19,6 +19,9 @@ public class City : MonoBehaviour, Selectable, Buildable
     [SerializeField] int boatPrice = 1500;
     [SerializeField] float maxHealth = 1000f;
     [SerializeField] bool onLand = true;
+    [SerializeField] float generationDelay = 5f;
+    float timeToMoney = 0f;
+    [SerializeField] int moneyGenerated = 120;
 
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
@@ -39,6 +42,19 @@ public class City : MonoBehaviour, Selectable, Buildable
 
         carRallypointOrder = new MoveOrder(carRallypoint.position, 5f);
         boatRallypointOrder = new MoveOrder(boatRallypoint.position, 5f);
+    }
+
+    void Update()
+    {
+        if (IsBuild())
+        {
+            timeToMoney -= Time.deltaTime;
+            if (timeToMoney <= 0)
+            {
+                NationsManager.GetNation(team).AddMoney(moneyGenerated);
+                timeToMoney = generationDelay;
+            }
+        }
     }
 
     public void CancelCurrentOrder()
@@ -134,13 +150,20 @@ public class City : MonoBehaviour, Selectable, Buildable
         return team;
     }
 
-    public void Build(float progressAmt, int team)
+    public void Build(float progressAmt, int team, VehicleController attacker)
     {
         if (!progression.ContainsKey(team))
         {
             progression.Add(team, 0);
         }
         progression[team] += progressAmt;
+
+        
+        if (attacker != null)
+        {
+            print("City was attacked!");
+            nation.SpotPriorityThreat(attacker);
+        }
 
         if (progression[team] >= maxHealth)
         {

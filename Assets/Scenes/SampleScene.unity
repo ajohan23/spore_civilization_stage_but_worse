@@ -337,6 +337,12 @@ MonoBehaviour:
   m_IgnoreFromBuild: 0
   m_ApplyToChildren: 1
   m_AffectedAgents: ffffffff
+--- !u!4 &33361532 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1169323427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &89813905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,6 +734,195 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be1680c54af2448804c6e81e10c41f, type: 3}
+--- !u!1 &222937328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 222937329}
+  - component: {fileID: 222937330}
+  m_Layer: 0
+  m_Name: Red Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &222937329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222937328}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &222937330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222937328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
+--- !u!1 &253190559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 253190560}
+  - component: {fileID: 253190561}
+  m_Layer: 0
+  m_Name: Brown Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &253190560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253190559}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &253190561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253190559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
+--- !u!1 &287257796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287257797}
+  - component: {fileID: 287257798}
+  m_Layer: 0
+  m_Name: Teal Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &287257797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287257796}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &287257798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287257796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &302320758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1370,6 +1565,12 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!4 &441014069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1880425334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &461727791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,6 +1705,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461727791}
   m_CullTransparentMesh: 1
+--- !u!1 &470183454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 470183455}
+  - component: {fileID: 470183456}
+  m_Layer: 0
+  m_Name: Navy Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &470183455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470183454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &470183456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470183454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
+--- !u!4 &473394829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 934687745}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &480878050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
@@ -1819,6 +2089,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 572102274}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579877922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 579877923}
+  - component: {fileID: 579877924}
+  m_Layer: 0
+  m_Name: Yellow Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &579877923
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579877922}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &579877924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579877922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &601678364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1893,6 +2226,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 601678364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &673839389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 673839390}
+  - component: {fileID: 673839391}
+  m_Layer: 0
+  m_Name: Forest Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &673839390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673839389}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &673839391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673839389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &814687362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2351,6 +2747,18 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1376707566}
+  - {fileID: 222937329}
+  - {fileID: 579877923}
+  - {fileID: 1167508637}
+  - {fileID: 287257797}
+  - {fileID: 470183455}
+  - {fileID: 673839390}
+  - {fileID: 1218682821}
+  - {fileID: 1849451784}
+  - {fileID: 253190560}
+  - {fileID: 1648383321}
+  - {fileID: 2060160603}
+  - {fileID: 2062776102}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &993684057
@@ -2368,94 +2776,115 @@ MonoBehaviour:
   Nations:
   - name: Blue Nation
     teamColor: {r: 0.07058824, g: 0.22797865, b: 0.8784314, a: 1}
-    isPlayer: 0
+    isPlayer: 1
     vehicles: []
     cities: []
-    money: 1000
+    money: 3000
+    threatAutoRespondRange: 30
   - name: Green Nation
     teamColor: {r: 0.022922225, g: 0.6320754, b: 0, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Red Nation
     teamColor: {r: 0.8679245, g: 0.101140015, b: 0.028657902, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Yellow Nation
     teamColor: {r: 1, g: 0.84313726, b: 0, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Orange Nation
     teamColor: {r: 1, g: 0.44705883, b: 0, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Teal Nation
     teamColor: {r: 0, g: 0.8105297, b: 1, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Purple
     teamColor: {r: 0.57254905, g: 0.0627451, b: 0.7294118, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Navy Blue Nation
     teamColor: {r: 0.08254717, g: 0.102762796, b: 0.3301887, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Forest Green Nation
     teamColor: {r: 0.14780512, g: 0.31132078, b: 0.14244395, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Crimson Nation
     teamColor: {r: 0.509434, g: 0.06968674, b: 0.06968674, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Pink Nation
     teamColor: {r: 1, g: 0.53333336, b: 0.91372555, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Brown Nation
     teamColor: {r: 0.2735849, g: 0.16522245, b: 0.06323425, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Mint Nation
     teamColor: {r: 0.6681648, g: 0.990566, b: 0.7412424, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Turqoise Nation
     teamColor: {r: 0, g: 0.4627451, b: 0.3882353, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
   - name: Peach
     teamColor: {r: 1, g: 0.6913403, b: 0.3820755, a: 1}
     isPlayer: 0
     vehicles: []
     cities: []
     money: 1000
+    threatAutoRespondRange: 30
+--- !u!4 &1010021229 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1370511528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1014500551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2696,6 +3125,69 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1167508636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1167508637}
+  - component: {fileID: 1167508638}
+  m_Layer: 0
+  m_Name: Orangee Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1167508637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167508636}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167508638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167508636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &1169323427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2839,6 +3331,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 29856803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1197574222 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 89813905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1214228931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2913,6 +3411,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1214228931}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218682820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218682821}
+  - component: {fileID: 1218682822}
+  m_Layer: 0
+  m_Name: Crimson Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1218682821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218682820}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218682822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218682820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &1263007909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3524,8 +4085,18 @@ MonoBehaviour:
   - {fileID: 2120439580}
   - {fileID: 340015362}
   - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
   team: 1
-  ActionTime: 20
   currentGoal: 0
 --- !u!1001 &1415754131
 PrefabInstance:
@@ -3606,6 +4177,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415754131}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1427215081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1678790471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1493975454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3680,79 +4257,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1493975454}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1535755973
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3054925329611385628, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: buildSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 256.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 195.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6784856817514105466, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Car (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 17af171aa24fae045b36c87e717541b0, type: 3}
 --- !u!1001 &1565950468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3929,6 +4433,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1648383320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1648383321}
+  - component: {fileID: 1648383322}
+  m_Layer: 0
+  m_Name: Mint Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1648383321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648383320}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1648383322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1648383320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
+--- !u!4 &1668117014 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 206631587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1678790471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4140,79 +4713,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be1680c54af2448804c6e81e10c41f, type: 3}
---- !u!1001 &1815112399
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3054925329611385628, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: buildSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 249.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 211.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6784856817514105466, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Car (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 17af171aa24fae045b36c87e717541b0, type: 3}
 --- !u!1001 &1831805256
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4292,6 +4792,69 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1831805256}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1849451783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1849451784}
+  - component: {fileID: 1849451785}
+  m_Layer: 0
+  m_Name: Pink Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1849451784
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849451783}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1849451785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849451783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &1873355387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4459,6 +5022,132 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be1680c54af2448804c6e81e10c41f, type: 3}
+--- !u!1 &2060160602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060160603}
+  - component: {fileID: 2060160604}
+  m_Layer: 0
+  m_Name: Turqoise Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2060160603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060160602}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2060160604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060160602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
+--- !u!1 &2062776101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2062776102}
+  - component: {fileID: 2062776103}
+  m_Layer: 0
+  m_Name: Peach Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2062776102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062776101}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2062776103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062776101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 6147643624002358241}
+  - {fileID: 1285963226}
+  - {fileID: 2120439580}
+  - {fileID: 340015362}
+  - {fileID: 480878050}
+  - {fileID: 1831805257}
+  - {fileID: 302320759}
+  - {fileID: 1197574222}
+  - {fileID: 473394829}
+  - {fileID: 441014069}
+  - {fileID: 1415754132}
+  - {fileID: 1668117014}
+  - {fileID: 495327999}
+  - {fileID: 33361532}
+  - {fileID: 1427215081}
+  - {fileID: 1010021229}
+  team: 1
+  currentGoal: 0
 --- !u!1001 &2068502831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4995,74 +5684,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6147643624002358240}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &8688635611399945055
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 237.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 194.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674364833599452634, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6784856817514105466, guid: 17af171aa24fae045b36c87e717541b0,
-        type: 3}
-      propertyPath: m_Name
-      value: Car
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 17af171aa24fae045b36c87e717541b0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5088,8 +5709,5 @@ SceneRoots:
   - {fileID: 818789895}
   - {fileID: 814687362}
   - {fileID: 1880425334}
-  - {fileID: 8688635611399945055}
-  - {fileID: 1535755973}
-  - {fileID: 1815112399}
   - {fileID: 1568336720}
   - {fileID: 1033926151}
