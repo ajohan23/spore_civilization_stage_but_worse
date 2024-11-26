@@ -15,6 +15,11 @@ public class NationsManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+
+            for (int i = 0; i < Nations.Length; i++)
+            {
+                Nations[i].SetTeam(i);
+            }
         }
     }
 

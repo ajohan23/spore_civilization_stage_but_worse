@@ -14,6 +14,8 @@ public class Nation
     [SerializeField] int money = 1000;
     [SerializeField] float threatAutoRespondRange = 30f;
 
+    int team = -1;
+
     public delegate void ThreatSpottet(VehicleController threat);
     public ThreatSpottet onThreatSpottet;
     public ThreatSpottet onPriorityThreatSpottet;
@@ -102,7 +104,7 @@ public class Nation
 
     public void SpotPriorityThreat(VehicleController threat)
     {
-        if (NationsManager.GetNation(threat.GetTeam()) != this)
+        if (threat.GetTeam() != team)
         {
             onPriorityThreatSpottet?.Invoke(threat);
             AutoRespond(threat);
@@ -128,5 +130,10 @@ public class Nation
     public string GetName()
     {
         return name;
+    }
+
+    public void SetTeam(int team)
+    {
+        this.team = team;
     }
 }

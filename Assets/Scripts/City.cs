@@ -166,6 +166,7 @@ public class City : MonoBehaviour, Selectable, Buildable
 
         if (progression[team] >= maxHealth)
         {
+            progression.Clear();
             nation.RemoveCity(this);
             this.team = team;
             nation = NationsManager.GetNation(team);

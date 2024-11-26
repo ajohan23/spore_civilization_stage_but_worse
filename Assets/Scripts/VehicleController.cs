@@ -93,9 +93,10 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
     void Update()
     {
-        if (imidiateThreats.Count > 0 && overrideCooldown > 0)
+        if (imidiateThreats.Count > 0)
         {
-            RespondToImidiateThreats();
+            if (overrideCooldown <= 0)
+                RespondToImidiateThreats();
         }
         else if (currentOrder != null)
         {
