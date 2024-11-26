@@ -55,7 +55,7 @@ public class AINationController : MonoBehaviour
                 {
                     VehicleController currentThreat = landThreats[i];
                     HealthAttackOrder attackThreat = new HealthAttackOrder(currentThreat, currentThreat.transform, currentThreat.transform.localScale.x * 5);
-                    availableLandVehicles[i].ExecuteOrder(attackThreat);
+                    availableLandVehicles[i].ExecuteOrder(attackThreat, false);
                     unavailableLandVehicles.Add(availableLandVehicles[i]);
                 }
                 foreach (VehicleController landVehicle in unavailableLandVehicles)
@@ -71,7 +71,7 @@ public class AINationController : MonoBehaviour
                 {
                     VehicleController currentThreat = seaThreats[i];
                     HealthAttackOrder attackThreat = new HealthAttackOrder(currentThreat, currentThreat.transform, currentThreat.transform.localScale.x * 5);
-                    availableSeaVehicles[i].ExecuteOrder(attackThreat);
+                    availableSeaVehicles[i].ExecuteOrder(attackThreat, false);
                     unavailableSeaVehicles.Add(availableSeaVehicles[i]);
                 }
                 foreach (VehicleController seaVehicle in unavailableSeaVehicles)
@@ -106,7 +106,7 @@ public class AINationController : MonoBehaviour
 
             foreach (VehicleController vehicle in selectedVehicles)
             {
-                vehicle.ExecuteOrder(order);
+                vehicle.ExecuteOrder(order, false);
             }
         }
     }

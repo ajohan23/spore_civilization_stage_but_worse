@@ -139,7 +139,7 @@ public class AttackOrder : Order
 
     public void Cancel(Selectable actor, Transform actorTransform)
     {
-        actor.ExecuteOrder(idleOrder);
+        actor.ExecuteOrder(idleOrder, false);
     }
 
     public void Execute(Selectable actor, Transform actorTransform)
@@ -180,7 +180,7 @@ public class HealthAttackOrder : Order
     }
     public void Cancel(Selectable actor, Transform actorTransform)
     {
-        actor.ExecuteOrder(idleOrder);
+        actor.ExecuteOrder(idleOrder, false);
     }
 
     public void Execute(Selectable actor, Transform actorTransform)

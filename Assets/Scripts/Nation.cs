@@ -111,14 +111,18 @@ public class Nation
 
     void AutoRespond(VehicleController threat)
     {
-        HealthAttackOrder order = new HealthAttackOrder(threat, threat.transform, threat.transform.localScale.x * 8);
         foreach(VehicleController friendly in vehicles)
         {
             if (Vector3.Distance(friendly.transform.position, threat.transform.position) <= threatAutoRespondRange && friendly.GetCurrentAction() == "Idle")
             {
-                friendly.ExecuteOrder(order);
+                friendly.AddImidiateThreat(threat);
             }
         }
+    }
+
+    public void CallForHealp(VehicleController threat)
+    {
+        AutoRespond(threat);
     }
 
     public string GetName()

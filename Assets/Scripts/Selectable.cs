@@ -8,7 +8,7 @@ public interface Selectable
 
     public void OnSelect(Selector selector);
 
-    public void ExecuteOrder(Order order);
+    public void ExecuteOrder(Order order, bool overrideThreats);
 
     public void CancelCurrentOrder();
 

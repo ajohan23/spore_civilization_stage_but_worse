@@ -64,7 +64,7 @@ public class City : MonoBehaviour, Selectable, Buildable
         currentAction = "Idle";
     }
 
-    public void ExecuteOrder(Order order)
+    public void ExecuteOrder(Order order, bool overrideThreats)
     {
         currentOrder = order;
     }
@@ -124,7 +124,7 @@ public class City : MonoBehaviour, Selectable, Buildable
         if (car != null)
         {
             car.SetTeam(team);
-            car.ExecuteOrder(carRallypointOrder);
+            car.ExecuteOrder(carRallypointOrder, false);
         }
     }
 
@@ -141,7 +141,7 @@ public class City : MonoBehaviour, Selectable, Buildable
         if (boat != null)
         {
             boat.SetTeam(team);
-            boat.ExecuteOrder(boatRallypointOrder);
+            boat.ExecuteOrder(boatRallypointOrder, false);
         }
     }
 
@@ -161,7 +161,6 @@ public class City : MonoBehaviour, Selectable, Buildable
         
         if (attacker != null)
         {
-            print("City was attacked!");
             nation.SpotThreat(attacker);
         }
 

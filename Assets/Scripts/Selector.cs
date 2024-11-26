@@ -68,7 +68,7 @@ public class Selector : MonoBehaviour
                             {
                                 if(_selected.GetMovementType() == MovementType.Land)
                                 {
-                                    _selected.ExecuteOrder(moveOrder);
+                                    _selected.ExecuteOrder(moveOrder, true);
                                 }
                             }
                             break;
@@ -78,12 +78,11 @@ public class Selector : MonoBehaviour
                             {
                                 if(_selected.GetMovementType() == MovementType.Sea)
                                 {
-                                    _selected.ExecuteOrder(moveOrder);
+                                    _selected.ExecuteOrder(moveOrder, true);
                                 }
                             }
                             break;
                         case "Spice Geyser":
-                            print("Spice");
                             Buildable geyserBuildable = hit.transform.GetComponent<Buildable>();
                             if (geyserBuildable != null)
                             {
@@ -94,17 +93,16 @@ public class Selector : MonoBehaviour
                                         AttackOrder attackOrder = new AttackOrder(geyserBuildable, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 5);
                                         foreach (Selectable _selected in selected)
                                         {
-                                            _selected.ExecuteOrder(attackOrder);
+                                            _selected.ExecuteOrder(attackOrder, true);
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    print("Issuing build order");
                                     BuildOrder buildOrder = new BuildOrder(hit.transform.position, geyserBuildable, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 5);
                                     foreach (Selectable _selected in selected)
                                     {
-                                        _selected.ExecuteOrder(buildOrder);
+                                        _selected.ExecuteOrder(buildOrder, true);
                                     }
                                 }
                             }
@@ -118,7 +116,7 @@ public class Selector : MonoBehaviour
                                 AttackOrder attackOrder = new AttackOrder(city, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 1.1f);
                                 foreach (Selectable _selected in selected)
                                 {
-                                    _selected.ExecuteOrder(attackOrder);
+                                    _selected.ExecuteOrder(attackOrder, true);
                                 }
                             }
                             break;
@@ -131,7 +129,7 @@ public class Selector : MonoBehaviour
                                 HealthAttackOrder order = new HealthAttackOrder(health, hit.transform, Mathf.Max(hit.transform.localScale.x, hit.transform.localScale.z) * 8f);
                                 foreach (Selectable _selected in selected)
                                 {
-                                    _selected.ExecuteOrder(order);
+                                    _selected.ExecuteOrder(order, true);
                                 }
                             }
                             break;

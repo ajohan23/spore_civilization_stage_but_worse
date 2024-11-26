@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.AI;
@@ -19,21 +20,34 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     public bool landVehicle = true;
     [SerializeField] GameObject deathExplosion;
     [SerializeField] float maxHealth = 100;
+    [SerializeField] float imidiateThreatRange = 8f;
+    [SerializeField] float imidiateThreatFollowRange = 16f;
+    [SerializeField] float overrideCooldownTime = 30f;
 
+    float overrideCooldown = 0f;
     float currentHealth = 100;
     Order currentOrder;
     string currentAction = "Idle";
     float reloadCooldown = 0f;
+    List<VehicleController> imidiateThreats = new List<VehicleController>();
+    Nation nation;
 
     public void CancelCurrentOrder()
     {
         currentOrder.Cancel(this, transform);
         currentOrder = null;
         currentAction = "Idle";
+        overrideCooldown = 0f;
     }
 
-    public void ExecuteOrder(Order order)
+    public void ExecuteOrder(Order order, bool overrideThreats)
     {
+        if (overrideThreats)
+        {
+            imidiateThreats.Clear();
+            overrideCooldown = overrideCooldownTime;
+        }
+
         currentOrder = order;
     }
 
@@ -79,7 +93,11 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
     void Update()
     {
-        if (currentOrder != null)
+        if (imidiateThreats.Count > 0 && overrideCooldown > 0)
+        {
+            RespondToImidiateThreats();
+        }
+        else if (currentOrder != null)
         {
             currentOrder.Execute(this, transform);
         }
@@ -88,6 +106,15 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
         {
             reloadCooldown -= Time.deltaTime;
         }
+
+        if (overrideCooldown > 0f)
+        {
+            overrideCooldown -= Time.deltaTime;
+        }
+
+
+        LocateImidiateThreats();
+        CheckDistancesToThreats();
     }
 
     void Start()
@@ -118,6 +145,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     public void SetTeam(int team)
     {
         this.team = team;
+        nation = NationsManager.GetNation(team);
         UpdateColor();
     }
 
@@ -170,7 +198,8 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
 
         if (attacker != null)
         {
-            NationsManager.GetNation(team).SpotThreat(attacker);
+            imidiateThreats.Add(attacker);
+            nation.CallForHealp(attacker);
         }
     }
 
@@ -193,5 +222,74 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     {
         Instantiate(deathExplosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    void LocateImidiateThreats()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, imidiateThreatRange);
+        if (team == 0) //Only for debugging
+        {
+            print(colliders.Length);
+        }
+        foreach (Collider collider in colliders)
+        {
+            VehicleController vehicle = collider.GetComponent<VehicleController>();
+            if (vehicle != null)
+            {
+                if (vehicle.GetTeam() != team)
+                {
+                    if (team == 0) //Only for debugging
+                    {
+                        print("Threat detected");
+                    }
+                    AddImidiateThreat(vehicle);
+                }
+            }
+        }
+    }
+
+    void CheckDistancesToThreats()
+    {
+        for(int i = 0; i < imidiateThreats.Count; i++)
+        {
+            if (imidiateThreats[i] == null)
+                continue;
+
+            if (Vector3.Distance(imidiateThreats[i].transform.position, transform.position) > imidiateThreatFollowRange)
+            {
+                imidiateThreats[i] = null;
+            }
+        }
+    }
+
+    void RespondToImidiateThreats()
+    {
+        if (imidiateThreats[0] == null)
+        {
+            imidiateThreats.RemoveAt(0);
+            return;
+        }
+
+        if (imidiateThreats.Count > 0)
+        {
+            HealthAttackOrder response = new HealthAttackOrder(imidiateThreats[0], imidiateThreats[0].transform, imidiateThreats[0].transform.localScale.x * 8);
+            response.Execute(this, transform);
+        }
+    }
+
+    public void AddImidiateThreat(VehicleController threat)
+    {
+        if (imidiateThreats.Contains(threat) == false)
+        {
+            imidiateThreats.Add(threat);
+        }
+    }
+
+    public void RemoveImidiateThreat(VehicleController threat)
+    {
+        if (imidiateThreats.Contains(threat))
+        {
+            imidiateThreats.Remove(threat);
+        }
     }
 }

@@ -846,22 +846,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
+  - {fileID: 471967147}
+  - {fileID: 172145985}
+  - {fileID: 1345562329}
+  - {fileID: 1314960006}
+  - {fileID: 1163163240}
+  - {fileID: 347237846}
+  - {fileID: 556525198}
+  - {fileID: 1334094116}
+  - {fileID: 1214228932}
+  - {fileID: 2107481062}
   - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
+  - {fileID: 441014069}
+  - {fileID: 1493975455}
+  - {fileID: 302320759}
+  - {fileID: 1415754132}
   team: 11
   currentGoal: 0
 --- !u!4 &263625475 stripped
@@ -1781,6 +1780,12 @@ MonoBehaviour:
   - {fileID: 495327999}
   team: 7
   currentGoal: 0
+--- !u!4 &471967147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 501537754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &473394829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
@@ -2034,6 +2039,12 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: d4102f3630b4b0e4db6b535d89d9b746, type: 2}
   m_BuildHeightMesh: 0
+--- !u!4 &556525198 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 814687362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &572102274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,6 +3239,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1163163240 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 818789895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1167508636
 GameObject:
   m_ObjectHideFlags: 0
@@ -3565,7 +3582,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goals: []
+  goals:
+  - {fileID: 1668117014}
+  - {fileID: 2068502832}
+  - {fileID: 1565950469}
+  - {fileID: 1415754132}
+  - {fileID: 1427215081}
+  - {fileID: 601678365}
+  - {fileID: 1010021229}
+  - {fileID: 857059171}
+  - {fileID: 263625475}
+  - {fileID: 1021948437}
+  - {fileID: 1709805}
+  - {fileID: 1970512533}
+  - {fileID: 1873355388}
+  - {fileID: 495327999}
+  - {fileID: 572102275}
+  - {fileID: 2127983992}
+  - {fileID: 473394829}
   team: 9
   currentGoal: 0
 --- !u!1001 &1263007909
@@ -4572,22 +4606,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
+  - {fileID: 1163163240}
+  - {fileID: 347237846}
+  - {fileID: 1345562329}
+  - {fileID: 172145985}
+  - {fileID: 471967147}
+  - {fileID: 1314960006}
+  - {fileID: 556525198}
+  - {fileID: 1334094116}
   - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
+  - {fileID: 1493975455}
+  - {fileID: 1214228932}
+  - {fileID: 2107481062}
   - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
+  - {fileID: 495327999}
+  - {fileID: 1415754132}
   team: 12
   currentGoal: 0
 --- !u!4 &1665154723 stripped
@@ -4998,22 +5031,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
   - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
+  - {fileID: 2107481062}
+  - {fileID: 1214228932}
+  - {fileID: 441014069}
+  - {fileID: 1493975455}
+  - {fileID: 1334094116}
+  - {fileID: 556525198}
+  - {fileID: 1314960006}
+  - {fileID: 1345562329}
+  - {fileID: 1163163240}
+  - {fileID: 347237846}
+  - {fileID: 172145985}
+  - {fileID: 471967147}
   team: 10
   currentGoal: 0
 --- !u!1001 &1873355387
@@ -5240,22 +5270,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
+  - {fileID: 556525198}
+  - {fileID: 1334094116}
+  - {fileID: 1214228932}
+  - {fileID: 2107481062}
   - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
+  - {fileID: 441014069}
+  - {fileID: 1493975455}
+  - {fileID: 302320759}
+  - {fileID: 1415754132}
+  - {fileID: 1314960006}
+  - {fileID: 1345562329}
+  - {fileID: 1163163240}
+  - {fileID: 347237846}
+  - {fileID: 172145985}
+  - {fileID: 471967147}
   team: 13
   currentGoal: 0
 --- !u!1 &2062776101
@@ -5303,22 +5332,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
   - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
+  - {fileID: 1493975455}
+  - {fileID: 302320759}
+  - {fileID: 556525198}
+  - {fileID: 1334094116}
+  - {fileID: 1214228932}
+  - {fileID: 1314960006}
+  - {fileID: 1345562329}
+  - {fileID: 172145985}
+  - {fileID: 471967147}
+  - {fileID: 347237846}
+  - {fileID: 1163163240}
   team: 14
   currentGoal: 0
 --- !u!1001 &2068502831

@@ -14,6 +14,7 @@ public class SpiceGeyser : MonoBehaviour, Buildable
     [SerializeField] int moneyGenerated = 200;
     [SerializeField] bool onLand = true;
 
+    Nation currentNation;
     Dictionary<int, float> progression = new Dictionary<int, float>();
 
     public void Build(float progressAmt, int team, VehicleController attacker)
@@ -27,15 +28,13 @@ public class SpiceGeyser : MonoBehaviour, Buildable
         if (progression[team] >= buildAmount)
         {
             this.team = team;
+            currentNation = NationsManager.GetNation(team);
             BuildTower();
         }
 
-        if (IsBuild())
+        if (attacker != null && currentNation != null)
         {
-            if (attacker != null)
-            {
-                NationsManager.GetNation(team).SpotThreat(attacker);
-            }
+            currentNation.SpotThreat(attacker);
         }
     }
 
