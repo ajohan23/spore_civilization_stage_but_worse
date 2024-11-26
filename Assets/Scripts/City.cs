@@ -162,7 +162,7 @@ public class City : MonoBehaviour, Selectable, Buildable
         if (attacker != null)
         {
             print("City was attacked!");
-            nation.SpotPriorityThreat(attacker);
+            nation.SpotThreat(attacker);
         }
 
         if (progression[team] >= maxHealth)

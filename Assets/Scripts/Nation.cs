@@ -120,4 +120,9 @@ public class Nation
             }
         }
     }
+
+    public string GetName()
+    {
+        return name;
+    }
 }

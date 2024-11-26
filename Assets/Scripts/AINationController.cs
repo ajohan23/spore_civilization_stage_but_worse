@@ -82,12 +82,12 @@ public class AINationController : MonoBehaviour
 
             //Order
             Transform target = goals[currentGoal].GetChild(0);
-            bool goalOnLand = nextGoal.OnLand();
             VehicleController[] selectedVehicles = availableLandVehicles.ToArray();
-            if (!goalOnLand)
+            if (!nextGoal.OnLand())
             {
                 selectedVehicles = availableSeaVehicles.ToArray();
             }
+            //print($"{nation.GetName()}: land({availableLandVehicles.Count}) sea({availableSeaVehicles.Count}) selected({selectedVehicles.Length})");
             Order order;
             float attackRange = 1.1f;
             if (nextGoal.GetType() == typeof(SpiceGeyser))
@@ -163,8 +163,6 @@ public class AINationController : MonoBehaviour
 
     public void AlertToPriorityThreat(VehicleController threat)
     {
-        if (threats.Contains(threat))
-            threats.Remove(threat);
         threats.Insert(0, threat);
     }
 

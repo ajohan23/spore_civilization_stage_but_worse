@@ -307,6 +307,7 @@ Transform:
   - {fileID: 1021948437}
   - {fileID: 1873355388}
   - {fileID: 572102275}
+  - {fileID: 1990645274}
   - {fileID: 1709805}
   - {fileID: 601678365}
   - {fileID: 1346107651}
@@ -779,23 +780,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
   - {fileID: 1197574222}
+  - {fileID: 1831805257}
+  - {fileID: 1990645274}
+  - {fileID: 572102275}
+  - {fileID: 475068555}
+  - {fileID: 1346107651}
+  - {fileID: 2127983992}
   - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
+  - {fileID: 1873355388}
+  - {fileID: 1970512533}
   - {fileID: 1427215081}
+  - {fileID: 1021948437}
+  - {fileID: 1709805}
+  - {fileID: 263625475}
+  - {fileID: 1565950469}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
   - {fileID: 1010021229}
-  team: 1
+  - {fileID: 857059171}
+  team: 2
   currentGoal: 0
 --- !u!1 &253190559
 GameObject:
@@ -858,8 +862,14 @@ MonoBehaviour:
   - {fileID: 33361532}
   - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  team: 11
   currentGoal: 0
+--- !u!4 &263625475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781621583}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &287257796
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,23 +915,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
+  - {fileID: 475068555}
+  - {fileID: 1346107651}
+  - {fileID: 572102275}
+  - {fileID: 2127983992}
   - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
+  - {fileID: 1990645274}
+  - {fileID: 1197574222}
+  - {fileID: 1831805257}
+  - {fileID: 1873355388}
+  - {fileID: 601678365}
+  - {fileID: 1427215081}
+  - {fileID: 1970512533}
+  - {fileID: 1709805}
+  - {fileID: 263625475}
+  - {fileID: 1021948437}
+  - {fileID: 1565950469}
+  - {fileID: 1010021229}
+  - {fileID: 857059171}
+  - {fileID: 2068502832}
   - {fileID: 1668117014}
   - {fileID: 495327999}
-  - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
-  team: 1
+  - {fileID: 302320759}
+  team: 5
   currentGoal: 0
 --- !u!1001 &302320758
 PrefabInstance:
@@ -1750,29 +1766,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
+  - {fileID: 1970512533}
+  - {fileID: 1873355388}
+  - {fileID: 1709805}
+  - {fileID: 263625475}
+  - {fileID: 1021948437}
+  - {fileID: 601678365}
   - {fileID: 1427215081}
+  - {fileID: 1565950469}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
   - {fileID: 1010021229}
-  team: 1
+  - {fileID: 857059171}
+  - {fileID: 495327999}
+  team: 7
   currentGoal: 0
 --- !u!4 &473394829 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
     type: 3}
   m_PrefabInstance: {fileID: 934687745}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &475068555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1014500551}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &480878050 stripped
 Transform:
@@ -2134,23 +2153,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
+  - {fileID: 1427215081}
+  - {fileID: 601678365}
+  - {fileID: 1565950469}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
+  - {fileID: 1010021229}
+  - {fileID: 857059171}
+  - {fileID: 1021948437}
+  - {fileID: 263625475}
+  - {fileID: 1709805}
+  - {fileID: 1873355388}
+  - {fileID: 1970512533}
+  - {fileID: 572102275}
+  - {fileID: 475068555}
+  - {fileID: 1346107651}
+  - {fileID: 2127983992}
+  - {fileID: 473394829}
+  - {fileID: 1990645274}
+  - {fileID: 1197574222}
   - {fileID: 1831805257}
   - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
   - {fileID: 1415754132}
-  - {fileID: 1668117014}
   - {fileID: 495327999}
   - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
-  team: 1
+  - {fileID: 441014069}
+  - {fileID: 480878050}
+  - {fileID: 1665154723}
+  team: 3
   currentGoal: 0
 --- !u!1001 &601678364
 PrefabInstance:
@@ -2271,24 +2301,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
-  - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  - {fileID: 857059171}
+  - {fileID: 1565950469}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
+  - {fileID: 1427215081}
+  - {fileID: 601678365}
+  - {fileID: 1021948437}
+  - {fileID: 263625475}
+  - {fileID: 1709805}
+  - {fileID: 1970512533}
+  - {fileID: 1873355388}
+  - {fileID: 475068555}
+  - {fileID: 1346107651}
+  - {fileID: 572102275}
+  - {fileID: 2127983992}
+  - {fileID: 473394829}
+  - {fileID: 1990645274}
+  - {fileID: 1197574222}
+  - {fileID: 1831805257}
+  team: 8
   currentGoal: 0
+--- !u!1001 &758168845
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 29856803}
+    m_Modifications:
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 254.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 529.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7689486687706427399, guid: 8577ce04b002ba942925b953168ce513,
+        type: 3}
+      propertyPath: m_Name
+      value: Spice Geyser (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8577ce04b002ba942925b953168ce513, type: 3}
 --- !u!1001 &814687362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2751,6 +2853,7 @@ Transform:
   - {fileID: 579877923}
   - {fileID: 1167508637}
   - {fileID: 287257797}
+  - {fileID: 1733594032}
   - {fileID: 470183455}
   - {fileID: 673839390}
   - {fileID: 1218682821}
@@ -2793,7 +2896,7 @@ MonoBehaviour:
     isPlayer: 0
     vehicles: []
     cities: []
-    money: 1000
+    money: 1500
     threatAutoRespondRange: 30
   - name: Yellow Nation
     teamColor: {r: 1, g: 0.84313726, b: 0, a: 1}
@@ -3170,23 +3273,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
   - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
+  - {fileID: 2127983992}
+  - {fileID: 572102275}
+  - {fileID: 1990645274}
+  - {fileID: 1197574222}
+  - {fileID: 1346107651}
+  - {fileID: 475068555}
+  - {fileID: 302320759}
+  - {fileID: 1831805257}
+  - {fileID: 1873355388}
+  - {fileID: 601678365}
+  - {fileID: 1970512533}
+  - {fileID: 1709805}
+  - {fileID: 263625475}
+  - {fileID: 1021948437}
   - {fileID: 1427215081}
+  - {fileID: 1565950469}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
   - {fileID: 1010021229}
-  team: 1
+  - {fileID: 857059171}
+  - {fileID: 495327999}
+  - {fileID: 1415754132}
+  team: 4
   currentGoal: 0
 --- !u!1001 &1169323427
 PrefabInstance:
@@ -3455,24 +3565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goals:
-  - {fileID: 6147643624002358241}
-  - {fileID: 1285963226}
-  - {fileID: 2120439580}
-  - {fileID: 340015362}
-  - {fileID: 480878050}
-  - {fileID: 1831805257}
-  - {fileID: 302320759}
-  - {fileID: 1197574222}
-  - {fileID: 473394829}
-  - {fileID: 441014069}
-  - {fileID: 1415754132}
-  - {fileID: 1668117014}
-  - {fileID: 495327999}
-  - {fileID: 33361532}
-  - {fileID: 1427215081}
-  - {fileID: 1010021229}
-  team: 1
+  goals: []
+  team: 9
   currentGoal: 0
 --- !u!1001 &1263007909
 PrefabInstance:
@@ -4494,8 +4588,14 @@ MonoBehaviour:
   - {fileID: 33361532}
   - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  team: 12
   currentGoal: 0
+--- !u!4 &1665154723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2133359827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1668117014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
@@ -4615,6 +4715,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be1680c54af2448804c6e81e10c41f, type: 3}
+--- !u!1 &1733594031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733594032}
+  - component: {fileID: 1733594033}
+  m_Layer: 0
+  m_Name: Meganta Nation AI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1733594032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733594031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 993684056}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1733594033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733594031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5bbf838933d394083642f4c8cc12e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goals:
+  - {fileID: 263625475}
+  - {fileID: 1021948437}
+  - {fileID: 1709805}
+  - {fileID: 601678365}
+  - {fileID: 1970512533}
+  - {fileID: 1873355388}
+  - {fileID: 1565950469}
+  - {fileID: 1010021229}
+  - {fileID: 857059171}
+  - {fileID: 495327999}
+  - {fileID: 2068502832}
+  - {fileID: 1668117014}
+  - {fileID: 1427215081}
+  - {fileID: 302320759}
+  team: 6
+  currentGoal: 0
 --- !u!1001 &1781621583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4853,7 +5014,7 @@ MonoBehaviour:
   - {fileID: 33361532}
   - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  team: 10
   currentGoal: 0
 --- !u!1001 &1873355387
 PrefabInstance:
@@ -5022,6 +5183,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02be1680c54af2448804c6e81e10c41f, type: 3}
+--- !u!4 &1970512533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1021391356812127642, guid: 02be1680c54af2448804c6e81e10c41f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1263007909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1990645274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1035625920782489193, guid: 8577ce04b002ba942925b953168ce513,
+    type: 3}
+  m_PrefabInstance: {fileID: 758168845}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2060160602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,7 +5256,7 @@ MonoBehaviour:
   - {fileID: 33361532}
   - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  team: 13
   currentGoal: 0
 --- !u!1 &2062776101
 GameObject:
@@ -5146,7 +5319,7 @@ MonoBehaviour:
   - {fileID: 33361532}
   - {fileID: 1427215081}
   - {fileID: 1010021229}
-  team: 1
+  team: 14
   currentGoal: 0
 --- !u!1001 &2068502831
 PrefabInstance:
