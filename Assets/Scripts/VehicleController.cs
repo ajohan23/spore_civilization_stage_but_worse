@@ -227,10 +227,7 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
     void LocateImidiateThreats()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, imidiateThreatRange);
-        if (team == 0) //Only for debugging
-        {
-            print(colliders.Length);
-        }
+
         foreach (Collider collider in colliders)
         {
             VehicleController vehicle = collider.GetComponent<VehicleController>();

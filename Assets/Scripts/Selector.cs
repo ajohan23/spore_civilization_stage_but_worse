@@ -42,7 +42,10 @@ public class Selector : MonoBehaviour
                     return;
                 }
 
-                DeselectAll();
+                if (!Input.GetKey(KeyCode.LeftShift))
+                {
+                    DeselectAll();
+                }
             }
         }
     }
