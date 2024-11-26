@@ -235,10 +235,6 @@ public class VehicleController : MonoBehaviour, Selectable, Movable, Builder, At
             {
                 if (vehicle.GetTeam() != team)
                 {
-                    if (team == 0) //Only for debugging
-                    {
-                        print("Threat detected");
-                    }
                     AddImidiateThreat(vehicle);
                 }
             }
